@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TransitionDemo</title>
+    <style>
+        #block{
+            width:400px;
+            height:400px;
+            margin:0px auto;
+            background-color:red;
+            -webkit-transition:background-color 3s;
+        }
+        #block:hover{
+            background-color: blue;
+        }
+        .progress-bar{
+            height: 40px;
+            width: 40px;
+            background-color: #69c;
+        }
+        .progress-bar:hover{
+            width: 960px;
+        }
+        #bar1{
+            -webkit-transition: width 5s linear;
+        }
+        #bar2{
+            -webkit-transition: width 5s ease;
+        }
+        #bar3{
+            -webkit-transition: width 5s ease-in;
+        }
+        #bar4{
+            -webkit-transition: width 5s ease-out;
+        }
+        #bar5{
+            -webkit-transition: width 5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div id="block"></div>
+
+    <div id="wrapper">
+        <p>linear</p>
+        <div class="progress-bar" id="bar1"></div>
+
+        <p>ease</p>
+        <div class="progress-bar" id="bar2"></div>
+
+        <p>ease-in</p>
+        <div class="progress-bar" id="bar3"></div>
+
+        <p>ease-out</p>
+        <div class="progress-bar" id="bar4"></div>
+
+        <p>ease-in-out</p>
+        <div class="progress-bar" id="bar5"></div>
+    </div>
+</body>
+</html>

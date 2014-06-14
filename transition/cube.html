@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>cube</title>
+    <style type="text/css">
+        #wrapper{
+            -webkit-perspective:800px;
+            -webkit-perspective-origin: 50% 50%;
+        }
+        #content{
+            position: relative;
+            margin:100px auto;
+            height: 200px;
+            width: 200px;
+            -webkit-transform-style:preserve-3d;
+        }
+
+        .num{
+            position: absolute;
+            height: 160px;
+            width: 160px;
+            padding:20px;
+            background-color: black;
+
+            color: white;
+            font-weight: bold;
+            font-size:160px;
+            line-height: 160px;
+            text-align: center;
+
+            -webkit-transition:-webkit-transform 1s linear;
+        }
+
+        #num1{
+
+        }
+        #num2{
+            -webkit-transform-origin:bottom;
+            -webkit-transform:rotateX(90deg);
+        }
+        #num3{
+            -webkit-transform-origin:left;
+            -webkit-transform:rotateY(90deg);
+        }
+        #num4{
+            -webkit-transform-origin:top;
+            -webkit-transform:rotateX(-90deg);
+        }
+        #num5{
+            -webkit-transform-origin:right;
+            -webkit-transform:rotateY(-90deg);
+        }
+        #num6{
+            -webkit-transform: translateZ(-200px);
+        }
+
+        #op{
+            margin:0 auto;
+            font-size:16px;
+            font-weight:bold;
+            width:800px;
+        }
+        #op .range-control{width:721px;}
+
+    </style>
+
+    <script type="text/javascript">
+        function rotate(){
+            var x = document.getElementById("rotatex").value;
+            var y = document.getElementById("rotatey").value;
+            var z = document.getElementById("rotatez").value;
+            document.getElementById('content').style.webkitTransform = "rotateX("+x+"deg) rotateY("+y+"deg) rotateZ("+z+"deg)";
+
+            document.getElementById('degx-span').innerText = x;
+            document.getElementById('degy-span').innerText = y;
+            document.getElementById('degz-span').innerText = z;
+        }
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="content">
+            <div class="num" id="num1">1</div>
+            <div class="num" id="num2">2</div>
+            <div class="num" id="num3">3</div>
+            <div class="num" id="num4">4</div>
+            <div class="num" id="num5">5</div>
+            <div class="num" id="num6">6</div>
+        </div>
+    </div>
+    <div id="op">
+        <p>rotate x: <span id="degx-span">0</span> deg</p>
+        <input type="range" min="-360" max="360" id="rotatex" value="0" class="range-control" onchange="rotate()" /><br/>
+        <p>rotate y: <span id="degy-span">0</span> deg</p>
+        <input type="range" min="-360" max="360" id="rotatey" value="0" class="range-control" onchange="rotate()" /><br/>
+        <p>rotate z: <span id="degz-span">0</span> deg</p>
+        <input type="range" min="-360" max="360" id="rotatez" value="0" class="range-control" onchange="rotate()" /><br/>
+    </div>
+</body>
+</html>

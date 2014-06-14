@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* CSS Document */
+#container {
+	width:300px;
+	height:90px;
+	border:1px solid #999999;
+	margin:0px;
+	padding:0px;
+}
+
+ul {
+	margin:0px;
+	padding:0px;
+	height:22px;
+	background:#d9d9d9;
+}
+
+li {
+	list-style:none;
+	float:left;
+	text-align:center;
+	font-size:12px;
+	line-height:22px;
+	background-color:d9d9d9;
+	padding:0px;
+	width:75px;
+	border:0px 0px 1px 0px solid #999999;
+}
+
+.tag{
+	background-color:#ffffff;
+	border:0px solid #999999;
+	border-bottom:0px;
+}
+
+.hidden {
+	display:none;
+}
+
+.show {
+	display:block;
+}
